@@ -29,27 +29,27 @@ export default function Skills() {
       </div>
 
       {/* Skills Grid */}
-      <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 mb-12">
+      <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 mb-8 sm:mb-12">
         {Object.entries(skills).map(([category, items]) => (
           <div
             key={category}
-            className={`glass-card p-6 ${isVisible ? "animate" : ""}`}
+            className={`glass-card p-5 sm:p-6 ${isVisible ? "animate" : ""}`}
           >
             {/* Category Header */}
-            <div className="flex items-center gap-3 mb-5">
-              <div className="w-10 h-10 flex items-center justify-center bg-gradient-to-r from-cyan-500 via-cyan-400 to-teal-400 rounded-lg text-white font-bold">
+            <div className="flex items-center gap-3 mb-4 sm:mb-5">
+              <div className="w-9 h-9 sm:w-10 sm:h-10 flex items-center justify-center bg-gradient-to-r from-cyan-500 via-cyan-400 to-teal-400 rounded-lg text-white font-bold text-sm sm:text-base">
                 {categoryConfig[category]?.icon}
               </div>
-              <h3 className="font-semibold text-[var(--text-primary)]">
+              <h3 className="font-semibold text-sm sm:text-base text-[var(--text-primary)]">
                 {categoryConfig[category]?.title}
               </h3>
             </div>
 
             {/* Skill Items */}
-            <div className="space-y-3">
+            <div className="space-y-2.5 sm:space-y-3">
               {items.map((skill) => (
                 <div key={skill.name} className="space-y-1">
-                  <span className="text-sm text-[var(--text-secondary)]">{skill.name}</span>
+                  <span className="text-xs sm:text-sm text-[var(--text-secondary)]">{skill.name}</span>
                   <div className="h-1.5 bg-[var(--bg-tertiary)] rounded-full overflow-hidden">
                     <div
                       className="skill-progress h-full bg-gradient-to-r from-cyan-500 via-cyan-400 to-teal-400 rounded-full"
@@ -65,12 +65,12 @@ export default function Skills() {
 
       {/* Additional Skills Cloud */}
       <div className="text-center">
-        <h3 className="text-lg font-semibold mb-6">Also worked with</h3>
-        <div className="flex flex-wrap justify-center gap-3">
+        <h3 className="text-base sm:text-lg font-semibold mb-4 sm:mb-6">Also worked with</h3>
+        <div className="flex flex-wrap justify-center gap-2 sm:gap-3">
           {additionalSkills.map((skill) => (
             <span
               key={skill}
-              className="px-4 py-2 glass-card rounded-full text-sm text-[var(--text-secondary)] hover:text-cyan-500 hover:border-cyan-500/30 transition-colors cursor-default"
+              className="px-3 sm:px-4 py-1.5 sm:py-2 glass-card rounded-full text-xs sm:text-sm text-[var(--text-secondary)] hover:text-cyan-500 hover:border-cyan-500/30 transition-colors cursor-default"
             >
               {skill}
             </span>

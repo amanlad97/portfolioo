@@ -58,33 +58,33 @@ export default function Contact() {
       </div>
 
       {/* Intro */}
-      <p className="text-center text-lg text-[var(--text-secondary)] max-w-xl mx-auto mb-8">
+      <p className="text-center text-base sm:text-lg text-[var(--text-secondary)] max-w-xl mx-auto mb-6 sm:mb-8 px-4">
         I&apos;m always interested in hearing about new opportunities, interesting projects, or just
         having a chat about technology.
       </p>
 
       {/* Contact Grid */}
-      <div className="grid sm:grid-cols-2 gap-4 mb-8">
+      <div className="grid sm:grid-cols-2 gap-3 sm:gap-4 mb-6 sm:mb-8">
         {contactLinks.map((link) => (
           <a
             key={link.label}
             href={link.href}
             target={link.href.startsWith("http") ? "_blank" : undefined}
             rel={link.href.startsWith("http") ? "noopener noreferrer" : undefined}
-            className="glass-card p-5 flex items-center gap-4 group hover:-translate-y-1 transition-transform"
+            className="glass-card p-4 sm:p-5 flex items-center gap-3 sm:gap-4 group hover:-translate-y-1 transition-transform"
           >
-            <div className="w-12 h-12 flex items-center justify-center bg-gradient-to-r from-cyan-500 via-cyan-400 to-teal-400 rounded-lg text-white flex-shrink-0">
+            <div className="w-10 h-10 sm:w-12 sm:h-12 flex items-center justify-center bg-gradient-to-r from-cyan-500 via-cyan-400 to-teal-400 rounded-lg text-white flex-shrink-0">
               {link.icon}
             </div>
             <div className="flex-1 min-w-0">
               <span className="block text-xs uppercase tracking-wide text-[var(--text-muted)]">
                 {link.label}
               </span>
-              <span className="block text-[var(--text-primary)] font-medium truncate">
+              <span className="block text-sm sm:text-base text-[var(--text-primary)] font-medium truncate">
                 {link.value}
               </span>
             </div>
-            <span className="text-xl text-[var(--text-muted)] group-hover:text-cyan-500 group-hover:translate-x-1 transition-all">
+            <span className="text-lg sm:text-xl text-[var(--text-muted)] group-hover:text-cyan-500 group-hover:translate-x-1 transition-all">
               →
             </span>
           </a>
@@ -92,11 +92,11 @@ export default function Contact() {
       </div>
 
       {/* Download Resume CTA */}
-      <div className="text-center">
+      <div className="text-center px-4">
         <a
           href={personalInfo.resume}
           download
-          className="inline-flex items-center gap-3 px-8 py-4 bg-gradient-to-r from-cyan-500 via-cyan-400 to-teal-400 rounded-full text-white font-medium text-lg hover:shadow-lg hover:shadow-cyan-500/30 transition-all duration-300 hover:-translate-y-0.5"
+          className="inline-flex items-center gap-2 sm:gap-3 px-6 sm:px-8 py-3 sm:py-4 bg-gradient-to-r from-cyan-500 via-cyan-400 to-teal-400 rounded-full text-white font-medium text-base sm:text-lg hover:shadow-lg hover:shadow-cyan-500/30 transition-all duration-300 hover:-translate-y-0.5"
         >
           <span>↓</span>
           <span>Download Resume</span>
