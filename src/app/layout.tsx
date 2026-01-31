@@ -26,6 +26,14 @@ export const metadata: Metadata = {
   authors: [{ name: personalInfo.name }],
   creator: personalInfo.name,
   publisher: personalInfo.name,
+  icons: {
+    icon: [
+      { url: "/favicon.png", type: "image/png" },
+    ],
+    apple: [
+      { url: "/favicon.png", type: "image/png" },
+    ],
+  },
   robots: {
     index: true,
     follow: true,
